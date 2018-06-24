@@ -7,8 +7,8 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="http://www.linuxfromscratch.org/lfs/downloads/development/lfs-bootscripts-20170325.tar.bz2"
-MD5SUMLIST="800dcf40e63d15978d073a8dd77e380d"
+WGETLIST="http://www.linuxfromscratch.org/lfs/downloads/8.1-rc1/lfs-bootscripts-20170626.tar.bz2"
+MD5SUMLIST="f7bf68926e5d44efdc8422a34cfd601a"
 
 ###############################################
 installation() { # INSTALLING SYSTEM SOFTWARE #
