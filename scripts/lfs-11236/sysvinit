@@ -8,7 +8,7 @@
 # Copyright (C) 1999-2017, Gerard Beekmans
 
 WGETLIST="http://download.savannah.gnu.org/releases/sysvinit/sysvinit-2.88dsf.tar.bz2
-          http://www.linuxfromscratch.org/patches/lfs/development/sysvinit-2.88dsf-consolidated-1.patch"
+          http://www.linuxfromscratch.org/patches/lfs/8.1-rc1/sysvinit-2.88dsf-consolidated-1.patch"
 MD5SUMLIST="6eda8a97b86e0a6f59dabbf25202aa6f
             0b7b5ea568a878fdcc4057b2bf36e5cb"
 
