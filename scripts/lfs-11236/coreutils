@@ -8,7 +8,7 @@
 # Copyright (C) 1999-2017, Gerard Beekmans
 
 WGETLIST="http://ftp.gnu.org/gnu/coreutils/coreutils-8.27.tar.xz
-          http://www.linuxfromscratch.org/patches/lfs/development/coreutils-8.27-i18n-1.patch"
+          http://www.linuxfromscratch.org/patches/lfs/8.1-rc1/coreutils-8.27-i18n-1.patch"
 MD5SUMLIST="502795792c212932365e077946d353ae
             a9404fb575dfd5514f3c8f4120f9ca7d"
 
