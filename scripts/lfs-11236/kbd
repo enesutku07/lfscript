@@ -8,7 +8,7 @@
 # Copyright (C) 1999-2017, Gerard Beekmans
 
 WGETLIST="https://www.kernel.org/pub/linux/utils/kbd/kbd-2.0.4.tar.xz
-          http://www.linuxfromscratch.org/patches/lfs/development/kbd-2.0.4-backspace-1.patch"
+          http://www.linuxfromscratch.org/patches/lfs/8.1-rc1/kbd-2.0.4-backspace-1.patch"
 MD5SUMLIST="c1635a5a83b63aca7f97a3eab39ebaa6
             f75cca16a38da6caa7d52151f7136895"
 
