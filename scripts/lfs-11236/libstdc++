@@ -7,8 +7,8 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="http://ftp.gnu.org/gnu/gcc/gcc-6.3.0/gcc-6.3.0.tar.bz2"
-MD5SUMLIST="677a7623c7ef6ab99881bc4e048debb6"
+WGETLIST="http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz"
+MD5SUMLIST="4ab282f414676496483b3e1793d07862"
 
 ###################################################
 preparation() { # CONSTRUCTING A TEMPORARY SYSTEM #
@@ -24,7 +24,7 @@ cd       build
     --disable-nls                   \
     --disable-libstdcxx-threads     \
     --disable-libstdcxx-pch         \
-    --with-gxx-include-dir=/tools/$LFS_TGT/include/c++/6.3.0
+    --with-gxx-include-dir=/tools/$LFS_TGT/include/c++/8.2.0
 
 make
 
