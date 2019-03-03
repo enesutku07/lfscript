@@ -7,8 +7,8 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="http://ftp.gnu.org/gnu/sed/sed-4.4.tar.xz"
-MD5SUMLIST="e0c583d4c380059abd818cd540fe6938"
+WGETLIST="http://ftp.gnu.org/gnu/sed/sed-4.7.tar.xz"
+MD5SUMLIST="777ddfd9d71dd06711fe91f0925e1573"
 
 ###############################################
 installation() { # INSTALLING SYSTEM SOFTWARE #
@@ -23,8 +23,8 @@ make
 make html
 
 make DESTDIR=${FAKEROOT} install
-install -d -m755           ${FAKEROOT}/usr/share/doc/sed-4.4
-install -m644 doc/sed.html ${FAKEROOT}/usr/share/doc/sed-4.4
+install -d -m755           ${FAKEROOT}/usr/share/doc/sed-4.7
+install -m644 doc/sed.html ${FAKEROOT}/usr/share/doc/sed-4.7
 
 ######################################################
 }; preparation() { # CONSTRUCTING A TEMPORARY SYSTEM #
