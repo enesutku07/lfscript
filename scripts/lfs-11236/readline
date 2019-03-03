@@ -7,8 +7,8 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="http://ftp.gnu.org/gnu/readline/readline-7.0.tar.gz"
-MD5SUMLIST="205b03a87fc83dab653b628c59b9fc91"
+WGETLIST="http://ftp.gnu.org/gnu/readline/readline-8.0.tar.gz"
+MD5SUMLIST="7e6c1f16aee3244a69aba6e438295ca3"
 
 ###############################################
 installation() { # INSTALLING SYSTEM SOFTWARE #
@@ -19,7 +19,7 @@ sed -i '/{OLDSUFF}/c:' support/shlib-install
 
 ./configure --prefix=/usr    \
             --disable-static \
-            --docdir=/usr/share/doc/readline-7.0
+            --docdir=/usr/share/doc/readline-8.0
 
 make SHLIB_LIBS="-L/tools/lib -lncursesw"
 
@@ -29,7 +29,7 @@ mv -v ${FAKEROOT}/usr/lib/lib{readline,history}.so.* ${FAKEROOT}/lib
 ln -sfv ../../lib/$(readlink ${FAKEROOT}/usr/lib/libreadline.so) ${FAKEROOT}/usr/lib/libreadline.so
 ln -sfv ../../lib/$(readlink ${FAKEROOT}/usr/lib/libhistory.so ) ${FAKEROOT}/usr/lib/libhistory.so
 
-install -v -m644 doc/*.{ps,pdf,html,dvi} ${FAKEROOT}/usr/share/doc/readline-7.0
+install -v -m644 doc/*.{ps,pdf,html,dvi} ${FAKEROOT}/usr/share/doc/readline-8.0
 
 #################
 } # END OF FILE #
