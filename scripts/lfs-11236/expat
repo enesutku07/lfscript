@@ -7,8 +7,8 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="http://prdownloads.sourceforge.net/expat/expat-2.2.0.tar.bz2"
-MD5SUMLIST="2f47841c829facb346eb6e3fab5212e2"
+WGETLIST="https://prdownloads.sourceforge.net/expat/expat-2.2.6.tar.bz2"
+MD5SUMLIST="ca047ae951b40020ac831c28859161b2"
 
 ###############################################
 installation() { # INSTALLING SYSTEM SOFTWARE #
@@ -20,8 +20,8 @@ make
 
 make DESTDIR=${FAKEROOT} install
 
-install -v -dm755 ${FAKEROOT}/usr/share/doc/expat-2.2.0
-install -v -m644 doc/*.{html,png,css} ${FAKEROOT}/usr/share/doc/expat-2.2.0
+install -v -dm755 ${FAKEROOT}/usr/share/doc/expat-2.2.6
+install -v -m644 doc/*.{html,png,css} ${FAKEROOT}/usr/share/doc/expat-2.2.6
 
 #################
 } # END OF FILE #
