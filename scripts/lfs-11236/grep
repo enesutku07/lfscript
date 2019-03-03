@@ -7,8 +7,8 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="http://ftp.gnu.org/gnu/grep/grep-3.0.tar.xz"
-MD5SUMLIST="fa07c1616adeb9c3262be5177d10ad4a"
+WGETLIST="http://ftp.gnu.org/gnu/grep/grep-3.3.tar.xz"
+MD5SUMLIST="05d0718a1b7cc706a4bdf8115363f1ed"
 
 ###############################################
 installation() { # INSTALLING SYSTEM SOFTWARE #
