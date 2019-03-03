@@ -7,8 +7,8 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="http://sourceforge.net/projects/procps-ng/files/Production/procps-ng-3.3.12.tar.xz"
-MD5SUMLIST="957e42e8b193490b2111252e4a2b443c"
+WGETLIST="https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-3.3.15.tar.xz"
+MD5SUMLIST="2b0717a7cb474b3d6dfdeedfbad2eccc"
 
 ###############################################
 installation() { # INSTALLING SYSTEM SOFTWARE #
