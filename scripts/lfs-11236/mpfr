@@ -7,8 +7,8 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="http://www.mpfr.org/mpfr-3.1.5/mpfr-3.1.5.tar.xz"
-MD5SUMLIST="c4ac246cf9795a4491e7766002cd528f"
+WGETLIST="http://www.mpfr.org/mpfr-4.0.2/mpfr-4.0.2.tar.xz"
+MD5SUMLIST="320fbc4463d4c8cb1e566929d8adc4f8"
 
 ###############################################
 installation() { # INSTALLING SYSTEM SOFTWARE #
@@ -17,7 +17,7 @@ installation() { # INSTALLING SYSTEM SOFTWARE #
 ./configure --prefix=/usr        \
             --disable-static     \
             --enable-thread-safe \
-            --docdir=/usr/share/doc/mpfr-3.1.5
+            --docdir=/usr/share/doc/mpfr-4.0.2
 
 make
 make html
