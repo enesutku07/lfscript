@@ -7,8 +7,8 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="http://ftp.gnu.org/gnu/dejagnu/dejagnu-1.6.tar.gz"
-MD5SUMLIST="1fdc2eb0d592c4f89d82d24dfdf02f0b"
+WGETLIST="http://ftp.gnu.org/gnu/dejagnu/dejagnu-1.6.2.tar.gz"
+MD5SUMLIST="e1b07516533f351b3aba3423fafeffd6"
 
 ###################################################
 preparation() { # CONSTRUCTING A TEMPORARY SYSTEM #
