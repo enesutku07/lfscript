@@ -7,8 +7,8 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="http://ftp.gnu.org/gnu/gawk/gawk-4.1.4.tar.xz"
-MD5SUMLIST="4e7dbc81163e60fd4f0b52496e7542c9"
+WGETLIST="http://ftp.gnu.org/gnu/gawk/gawk-4.2.1.tar.xz"
+MD5SUMLIST="95cf553f50ec9f386b5dfcd67f30180a"
 
 ###############################################
 installation() { # INSTALLING SYSTEM SOFTWARE #
@@ -20,8 +20,8 @@ make
 
 make DESTDIR=${FAKEROOT} install
 
-mkdir -v ${FAKEROOT}/usr/share/doc/gawk-4.1.4
-cp    -v doc/{awkforai.txt,*.{eps,pdf,jpg}} ${FAKEROOT}/usr/share/doc/gawk-4.1.4
+mkdir -v ${FAKEROOT}/usr/share/doc/gawk-4.2.1
+cp    -v doc/{awkforai.txt,*.{eps,pdf,jpg}} ${FAKEROOT}/usr/share/doc/gawk-4.2.1
 
 ######################################################
 }; preparation() { # CONSTRUCTING A TEMPORARY SYSTEM #
