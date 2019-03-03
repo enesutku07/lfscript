@@ -7,16 +7,16 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="http://ftp.gnu.org/gnu/coreutils/coreutils-8.27.tar.xz
-          http://www.linuxfromscratch.org/patches/lfs/8.1-rc1/coreutils-8.27-i18n-1.patch"
-MD5SUMLIST="502795792c212932365e077946d353ae
+WGETLIST="http://ftp.gnu.org/gnu/coreutils/coreutils-8.30.tar.xz
+           http://www.linuxfromscratch.org/patches/lfs/8.4/coreutils-8.30-i18n-1.patch"
+MD5SUMLIST="ab06d68949758971fe744db66b572816
             a9404fb575dfd5514f3c8f4120f9ca7d"
 
 ###############################################
 installation() { # INSTALLING SYSTEM SOFTWARE #
 ###############################################
 
-patch -Np1 -i ../coreutils-8.27-i18n-1.patch
+patch -Np1 -i ../coreutils-8.30-i18n-1.patch
 
 sed -i '/test.lock/s/^/#/' gnulib-tests/gnulib.mk
 
