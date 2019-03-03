@@ -57,11 +57,11 @@ mv -v ${FAKEROOT}/usr/lib/*gdb.py ${FAKEROOT}/usr/share/gdb/auto-load/usr/lib
 #####################################################################
 
 tar -xf ../mpfr-4.0.2.tar.xz
-mv -v mpfr-4.0.2.tar.xz
+mv -v mpfr-4.0.2 mpfr
 tar -xf ../gmp-6.1.2.tar.xz
 mv -v gmp-6.1.2 gmp
 tar -xf ../mpc-1.1.0.tar.gz
-mv -v mpc-1.1.0.tar.gz
+mv -v mpc-1.1.0 mpc
 
 for file in gcc/config/{linux,i386/linux{,64}}.h
 do
@@ -141,11 +141,11 @@ case $(uname -m) in
 esac
 
 tar -xf ../mpfr-4.0.2.tar.xz
-mv -v mpfr-4.0.2.tar.xz
+mv -v mpfr-4.0.2 mpfr
 tar -xf ../gmp-6.1.2.tar.xz
 mv -v gmp-6.1.2 gmp
 tar -xf ../mpc-1.1.0.tar.gz
-mv -v mpc-1.1.0.tar.gz
+mv -v mpc-1.1.0 mpc
 
 mkdir -v build
 cd       build
