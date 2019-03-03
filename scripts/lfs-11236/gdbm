@@ -7,8 +7,8 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="http://ftp.gnu.org/gnu/gdbm/gdbm-1.13.tar.gz"
-MD5SUMLIST="8929dcda2a8de3fd2367bdbf66769376"
+WGETLIST="http://ftp.gnu.org/gnu/gdbm/gdbm-1.18.1.tar.gz"
+MD5SUMLIST="988dc82182121c7570e0cb8b4fcd5415"
 
 ###############################################
 installation() { # INSTALLING SYSTEM SOFTWARE #
