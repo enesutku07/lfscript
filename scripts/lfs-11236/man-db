@@ -7,15 +7,15 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="http://download.savannah.gnu.org/releases/man-db/man-db-2.7.6.1.tar.xz"
-MD5SUMLIST="2948d49d0ed7265f60f83aa4a9ac9268"
+WGETLIST="http://download.savannah.gnu.org/releases/man-db/man-db-2.8.5.tar.xz"
+MD5SUMLIST="c5c6c3434be14a5527d43b5ad0f09a13"
 
 ###############################################
 installation() { # INSTALLING SYSTEM SOFTWARE #
 ###############################################
 
 ./configure --prefix=/usr                        \
-            --docdir=/usr/share/doc/man-db-2.7.6.1 \
+            --docdir=/usr/share/doc/man-db-2.8.5 \
             --sysconfdir=/etc                    \
             --disable-setuid                     \
             --enable-cache-owner=bin             \
