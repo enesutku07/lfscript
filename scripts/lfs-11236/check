@@ -7,8 +7,8 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="https://github.com/libcheck/check/releases/download/0.11.0/check-0.11.0.tar.gz"
-MD5SUMLIST="9b90522b31f5628c2e0f55dda348e558"
+WGETLIST=" https://github.com/libcheck/check/releases/download/0.12.0/check-0.12.0.tar.gz"
+MD5SUMLIST="31b17c6075820a434119592941186f70"
 
 ###################################################
 preparation() { # CONSTRUCTING A TEMPORARY SYSTEM #
