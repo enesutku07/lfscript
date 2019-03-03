@@ -7,8 +7,8 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="http://ftp.gnu.org/gnu/automake/automake-1.15.tar.xz"
-MD5SUMLIST="9a1ddb0e053474d9d1105cfe39b0c48d"
+WGETLIST="http://ftp.gnu.org/gnu/automake/automake-1.16.1.tar.xz"
+MD5SUMLIST="53f38e7591fa57c3d2cee682be668e5b"
 
 ###############################################
 installation() { # INSTALLING SYSTEM SOFTWARE #
@@ -16,7 +16,7 @@ installation() { # INSTALLING SYSTEM SOFTWARE #
 
 sed -i 's:/\\\${:/\\\$\\{:' bin/automake.in
 
-./configure --prefix=/usr --docdir=/usr/share/doc/automake-1.15
+./configure --prefix=/usr --docdir=/usr/share/doc/automake-1.16.1
 
 make
 
