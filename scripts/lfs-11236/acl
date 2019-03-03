@@ -7,7 +7,7 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 VERSION="2.2.53"
-WGETLIST="http://download.savannah.gnu.org/releases/acl/acl-$VERSIN.tar.gz"
+WGETLIST="http://download.savannah.gnu.org/releases/acl/acl-$VERSION.tar.gz"
 MD5SUMLIST="007aabf1dbb550bcddde52a244cd1070"
 
 ###############################################
