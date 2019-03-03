@@ -7,8 +7,8 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="https://www.kernel.org/pub/linux/utils/util-linux/v2.29/util-linux-2.29.2.tar.xz"
-MD5SUMLIST="63c40c2068fcbb7e1d5c1d281115d973"
+WGETLIST="https://www.kernel.org/pub/linux/utils/util-linux/v2.33/util-linux-2.33.1.tar.xz"
+MD5SUMLIST="6fcfea2043b5ac188fd3eed56aeb5d90"
 
 ###############################################
 installation() { # INSTALLING SYSTEM SOFTWARE #
@@ -17,7 +17,7 @@ installation() { # INSTALLING SYSTEM SOFTWARE #
 mkdir -pv ${FAKEROOT}/var/lib/hwclock
 
 ./configure ADJTIME_PATH=/var/lib/hwclock/adjtime   \
-            --docdir=/usr/share/doc/util-linux-2.29.2 \
+            --docdir=/usr/share/doc/util-linux-2.33.1 \
             --disable-chfn-chsh  \
             --disable-login      \
             --disable-nologin    \
