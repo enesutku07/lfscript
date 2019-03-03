@@ -7,10 +7,10 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="http://dev.gentoo.org/~blueness/eudev/eudev-3.2.2.tar.gz
-          http://anduin.linuxfromscratch.org/LFS/udev-lfs-20140408.tar.bz2"
-MD5SUMLIST="41e19b70462692fefd072a3f38818b6e
-            c2d6b127f89261513b23b6d458484099"
+WGETLIST="https://dev.gentoo.org/~blueness/eudev/eudev-3.2.7.tar.gz
+          http://anduin.linuxfromscratch.org/LFS/udev-lfs-20171102.tar.bz2"
+MD5SUMLIST="c75d99910c1791dd9430d26ab76059c0
+            d92afb0c6e8e616792068ee4737b0d24"
 POSTINST="now"
 
 ###############################################
@@ -44,7 +44,7 @@ LIBRARY_PATH=/tools/lib make
 make DESTDIR=${FAKEROOT} LD_LIBRARY_PATH=/tools/lib install
 
 tar -xvf ../udev-lfs-20140408.tar.bz2
-make DESTDIR=${FAKEROOT} -f udev-lfs-20140408/Makefile.lfs install
+make DESTDIR=${FAKEROOT} -f udev-lfs-20171102/Makefile.lfs install
 
 ###################################################
 }; postinst() { # POST-INSTALLATION CONFIGURATION #
