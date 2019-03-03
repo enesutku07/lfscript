@@ -7,8 +7,8 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-2.25.tar.xz"
-MD5SUMLIST="6666b839e5d46c2ad33fc8aa2ceb5f77"
+WGETLIST="https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-2.26.tar.xz"
+MD5SUMLIST="968ac4d42a1a71754313527be2ab5df3"
 
 ###############################################
 installation() { # INSTALLING SYSTEM SOFTWARE #
