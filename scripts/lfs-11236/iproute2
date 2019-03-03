@@ -7,8 +7,8 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="https://www.kernel.org/pub/linux/utils/net/iproute2/iproute2-4.10.0.tar.xz"
-MD5SUMLIST="b94a2b0edefaeac124dc8f5d006931b9"
+WGETLIST="https://www.kernel.org/pub/linux/utils/net/iproute2/iproute2-4.20.0.tar.xz"
+MD5SUMLIST="f3dab4c812812bbb5873cb90f471bcbf"
 
 ###############################################
 installation() { # INSTALLING SYSTEM SOFTWARE #
@@ -22,7 +22,7 @@ sed -i 's/m_ipt.o//' tc/Makefile
 
 make
 
-make DESTDIR=${FAKEROOT} DOCDIR=/usr/share/doc/iproute2-4.10.0 install
+make DESTDIR=${FAKEROOT} DOCDIR=/usr/share/doc/iproute2-4.20.0 install
 
 #################
 } # END OF FILE #
