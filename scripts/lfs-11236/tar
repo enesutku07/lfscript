@@ -7,8 +7,8 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="http://ftp.gnu.org/gnu/tar/tar-1.29.tar.xz"
-MD5SUMLIST="a1802fec550baaeecff6c381629653ef"
+WGETLIST="http://ftp.gnu.org/gnu/tar/tar-1.31.tar.xz"
+MD5SUMLIST="bc9a89da1185ceb2210de12552c43ce2"
 
 ###############################################
 installation() { # INSTALLING SYSTEM SOFTWARE #
@@ -21,7 +21,7 @@ FORCE_UNSAFE_CONFIGURE=1  \
 make
 
 make DESTDIR=${FAKEROOT} install
-make DESTDIR=${FAKEROOT} -C doc install-html docdir=/usr/share/doc/tar-1.29
+make DESTDIR=${FAKEROOT} -C doc install-html docdir=/usr/share/doc/tar-1.31
 
 ######################################################
 }; preparation() { # CONSTRUCTING A TEMPORARY SYSTEM #
