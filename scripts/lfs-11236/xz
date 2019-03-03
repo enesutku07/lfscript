@@ -7,8 +7,8 @@
 # Linux From Scratch is released under the MIT license.
 # Copyright (C) 1999-2017, Gerard Beekmans
 
-WGETLIST="http://tukaani.org/xz/xz-5.2.3.tar.xz"
-MD5SUMLIST="60fb79cab777e3f71ca43d298adacbd5"
+WGETLIST="https://tukaani.org/xz/xz-5.2.4.tar.xz"
+MD5SUMLIST="003e4d0b1b1899fc6e3000b24feddf7c"
 
 ###############################################
 installation() { # INSTALLING SYSTEM SOFTWARE #
@@ -16,7 +16,7 @@ installation() { # INSTALLING SYSTEM SOFTWARE #
 
 ./configure --prefix=/usr    \
             --disable-static \
-            --docdir=/usr/share/doc/xz-5.2.3
+            --docdir=/usr/share/doc/xz-5.2.4
 
 make
 
