@@ -20,35 +20,48 @@ installation() { # INSTALLING SYSTEM SOFTWARE #
 ###############################################
 
 patch -Np1 -i ../glibc-2.29-fhs-1.patch
-
 case $(uname -m) in
-    x86) ln -s ld-linux.so.2 ${FAKEROOT}/lib/ld-lsb.so.3
+    x86)    GCC_INCDIR=/usr/lib/gcc/$(uname -m)-pc-linux-gnu/8.2.0/include
+            ln -sfv ld-linux.so.2 ${FAKEROOT}/lib/ld-lsb.so.3
     ;;
-    x86_64) ln -s ../lib/ld-linux-x86-64.so.2 ${FAKEROOT}/lib64
-            ln -s ../lib/ld-linux-x86-64.so.2 ${FAKEROOT}/lib64/ld-lsb-x86-64.so.3
+    x86_64) GCC_INCDIR=/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include
+            ln -sfv ../lib/ld-linux-x86-64.so.2 ${FAKEROOT}/lib64
+            ln -sfv ../lib/ld-linux-x86-64.so.2 ${FAKEROOT}/lib64/ld-lsb-x86-64.so.3
     ;;
 esac
 
-mkdir -v build
-cd       build
+rm -f ${FAKEROOT}/usr/include/limits.h
 
-../configure --prefix=/usr                   \
-             --enable-kernel=2.6.32          \
-             --enable-obsolete-rpc           \
+mkdir -v ../build
+cd       ../build
+
+CC="gcc -isystem $GCC_INCDIR -isystem ${FAKEROOT}/usr/include" \
+../glibc-2.29/configure --prefix=/usr                   \
+             --enable-kernel=3.2           \
+             --disable-werror              \
              --enable-stack-protector=strong \
-             libc_cv_slibdir=/lib
+             libc_cv_forced_unwind=yes          \
+             libc_cv_slibdir=/lib   \
+             libc_cv_c_cleanup=yes
+    
+#--enable-obsolete-rpc           \
+
+unset GCC_INCDIR
 
 make
 
 touch ${FAKEROOT}/etc/ld.so.conf
 
-make install_root=${FAKEROOT} install
+sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile
 
-cp -v ../nscd/nscd.conf ${FAKEROOT}/etc/nscd.conf
+make DESTDIR=${FAKEROOT} install
+# install_root=${FAKEROOT}
+
+cp -v ../glibc-2.29/nscd/nscd.conf ${FAKEROOT}/etc/nscd.conf
 mkdir -pv ${FAKEROOT}/var/cache/nscd
 
-make install_root=${FAKEROOT} localedata/install-locales
-
+make  DESTDIR=${FAKEROOT} localedata/install-locales
+#install_root=${FAKEROOT}
 cat > ${FAKEROOT}/etc/nsswitch.conf << "EOF"
 # Begin /etc/nsswitch.conf
 
@@ -67,7 +80,7 @@ rpc: files
 # End /etc/nsswitch.conf
 EOF
 
-tar -xf ../../tzdata2018i.tar.gz
+tar -xf ../tzdata2018i.tar.gz
 
 ZONEINFO=${FAKEROOT}/usr/share/zoneinfo
 mkdir -pv $ZONEINFO/{posix,right}
@@ -117,15 +130,16 @@ cp -v /usr/share/zoneinfo/${TZ} /etc/localtime
 }; preparation() { # CONSTRUCTING A TEMPORARY SYSTEM #
 ######################################################
 
-mkdir -v build
-cd       build
+mkdir -v ../build
+cd       ../build
 
-../configure                             \
+../glibc-2.29/configure                             \
       --prefix=/tools                    \
       --host=$LFS_TGT                    \
       --build=$(../scripts/config.guess) \
-      --enable-kernel=2.6.32             \
+      --enable-kernel=3.2           \
       --with-headers=/tools/include      \
+      libc_cv_slibdir=/lib		    \
       libc_cv_forced_unwind=yes          \
       libc_cv_c_cleanup=yes
 
@@ -136,4 +150,3 @@ make install
 #################
 } # END OF FILE #
 #################
-
