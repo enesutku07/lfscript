@@ -13,6 +13,8 @@ MD5SUMLIST="730bb15d96fffe47e148d1e09235af82"
 ###############################################
 installation() { # INSTALLING SYSTEM SOFTWARE #
 ###############################################
+sed -i 's/IO_ftrylockfile/IO_EOF_SEEN/' lib/*.c
+echo "#define _IO_IN_BACKUP 0x100" >> lib/stdio-impl.h
 
 ./configure --prefix=/usr
 
